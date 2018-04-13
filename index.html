@@ -8,76 +8,76 @@
 <body style="font:25px;">
 
 <h3>1) How to see the git status</h3>
-	<p>git status</p>
+	<p><b>git status</b></p>
 	
 <h3>2)	How to see the differences between last commit head to current commit</h3>
-	<p>git diff HEAD^ HEAD</p>
+	<p><b>git diff HEAD^ HEAD</b></p>
 	
 <h3>3)	How to see the diff in specific two branch</h3>
-	<p>git diff branch1..branch2</p>
+	<p><b>git diff branch1..branch2</b></p>
 	
 <h3>4)	Git Pull command syntax</h3>
-	<p>git pull [<options>] [<repository> [<refspec>...]]</p>
+	<p><b>git pull [<options>] [<repository> [<refspec>...]]</b></p>
 	
 <h3>5)	How to Rename the Remote branch</h3>
-	<p>git branch -m old_branch new_branch         # Rename branch locally<br/>
-	git push origin :old_branch                 # Delete the old branch<br/>
-	git push --set-upstream origin new_branch   # Push the new branch, set local branch to track the new remote</p>
+	<p><b>git branch -m old_branch new_branch</b>   &nbsp;&nbsp;&nbsp;&nbsp;      # Rename branch locally<br/>
+	<b>git push origin :old_branch</b>       &nbsp;&nbsp;&nbsp;&nbsp;        # Delete the old branch<br/>
+	<b>git push --set-upstream origin new_branch</b>  &nbsp;&nbsp;&nbsp;&nbsp; # Push the new branch, set local branch to track the new remote</p>
 	
 <h3>6) If you branch is diverged from 'develop' branch and pushed to remote branch </h3>
 	<p>we can reset to the last opted branch using gitk GUI commits sequences</p>
 	
 <h3>7) How to Edit the Commit messages in GIT Bash</h3>
-	<p>git rebase -i head~n   [where 'n' is the index of the commit in gitk sequences]</p>
+	<p><b>git rebase -i head~n</b>  &nbsp;&nbsp;&nbsp;&nbsp; [where 'n' is the index of the commit in gitk sequences]</p>
 	
 <h3>8) How to Squash the commits for single</h3>
 		<p>To be edited</p>
 
 <h3>9) How to Sync the Git's Branches with Remote and local repositories</h3>
-	<p>git pull --prune</p>
+	<p><b>git pull --prune</b></p>
 	
 <h3>10) How to Checkout the Remote Branch to local repository</h3>
-	<p>git checkout origin/feature/US123456<br/>
-	git checkout -b feature/DE54357</p>
+	<p><b>git checkout origin/feature/US123456</b><br/>
+	<b>git checkout -b feature/DE123456</b></p>
 	
 <h3>11) How to Edit the Last Commit message</h3>
-	<p>git commit --amend</p>
+	<p><b>git commit --amend</b></p>
 
 <h3>12) How to forcefully pushed to remote repositories</h3>
-	<p>git push -f origin <remote branch name></p>
+	<p><b>git push -f origin <remote branch name></b></p>
 	
 <h3>13) How to modify the First Commit in the Project </h3>
-	<p>git rebase -i --root<br/>
-	Then changes and force push<br/>
-	git push -f -u origin <BranchName></p>
+	<p><b>git rebase -i --root</b><br/>
+	Then changes and force push</b><br/>
+	<b>git push -f -u origin <BranchName></b></p>
 	
 <h3>14) How to change the specific commits author</h3>
-	<p>git rebase -i <SpecificCommitHash><br/>
+	<p><b>git rebase -i <SpecificCommitHash></b><br/>
 	use e= edit option and save using :wq<br/>
-	git config user.name "<UserName>"<br/>
-	git config user.email "<User@email.com>"<br/>
-	git commit --amend --reset-author<br/>
-	git rebase --continue<br/>
-	git push -f -u origin <BranchName></p>
+	<b>git config user.name "<UserName>"</b><br/>
+	<b>git config user.email "<User@email.com>"</b><br/>
+	<b>git commit --amend --reset-author</b><br/>
+	<b>git rebase --continue</b><br/>
+	<b>git push -f -u origin <BranchName></b></p>
 
 <h3>15) How to override one branch with Other branch</h3>
 	<p>You should be able to use the "ours" merge strategy to overwrite master with seotweaks like this:<br/>
 
-	git checkout seotweaks<br/>
-	git merge -s ours master<br/>
-	git checkout master<br/>
-	git merge seotweaks<br/>
+	<b>git checkout seotweaks</b><br/>
+	<b>git merge -s ours master</b><br/>
+	<b>git checkout master</b><br/>
+	<b>git merge seotweaks</b><br/>
 	The result should be your master is now essentially seotweaks.<br/>
 
 	(-s ours is short for --strategy=ours)</p>
 	
 <h3>16) How to delete Remote and Local branch in Git</h3>
-	<p>git push origin --delete <branch_name><br/>
-	git branch -d <branch_name></p>
+	<p><b>git push origin --delete <branch_name></b><br/>
+	<b>git branch -d <branch_name></b></p>
 	
 <h3>17) How to revert a specific file to specif commits state</h3>
 	<p>Assuming the hash of the commit you want is abcde:<br/>
-	git checkout abcde file/to/restore<br/>
+	<b>git checkout &lt;commit-hash&gt; &lt;file/to/restore&gt;</b><br/>
 	Note if you want to revert changes made to the files in commit abcde you have to pass the commit right before abcde.<br/>
 	You can use abcde~1 for this.<br/>
 
@@ -85,18 +85,18 @@
 	unusual destructive things (discarding changes in the working directory).</p>
 
 <h3>18) How to see the all properties of git config settings</h3>
-	<p>$ git config --list</p>
+	<p><b>$ git config --list</b></p>
 	
 <h3>19)	What is 'cherry-Pick' mean in git:-</h3>
 
 	<p>Cherry picking in git means to choose a commit from one branch and apply it onto another.<br/>
 	
 	This is in contrast with other ways such as merge and rebase which normally applies many commits onto a another branch.	<br/>
-	Make sure you are on the branch you want apply the commit to.<br/>
+	Make sure you are on the branch <b>develop</b> you want apply the commit  from  another branch i.e <b>feature</b>.<br/>
 	
-	git checkout master<br/>
+	<b>git checkout develop</b><br/>
 	Execute the following:<br/>
 	
-	git cherry-pick <commit-hash></p>
+	<b>git cherry-pick &lt;commit-hash&gt;</b></p>
 </body>
 </html>
