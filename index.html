@@ -30,8 +30,11 @@
 <h3>7) How to Edit the Commit messages in GIT Bash</h3>
 	<p><b>git rebase -i head~n</b>  &nbsp;&nbsp;&nbsp;&nbsp; [where 'n' is the index of the commit in gitk sequences]</p>
 	
-<h3>8) How to Squash the commits for single</h3>
-		<p>To be edited</p>
+<h3>8) How to Squash the Multiple Commits into single commit</h3>
+		<p><b>git rebase -i head~n</b>	&nbsp;&nbsp;&nbsp;&nbsp; [where 'n' is the index of the commit upto which commits will be Squashed]</p>
+		<p>Pick the Commit which will be used as base.<br/>
+			And select <b>s</b> for Squash into the base Pick one commit.<br/>
+			Use Escape key button and type <b>:wq</b> and hit enter. which will prvide edit the Commit squashed message</p>
 
 <h3>9) How to Sync the Git's Branches with Remote and local repositories</h3>
 	<p><b>git pull --prune</b></p>
