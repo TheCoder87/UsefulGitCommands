@@ -6,55 +6,93 @@
 	<link rel="stylesheet" href="index.css">
 </head>
 <body style="font:25px;">
+	
+<h3>1) How to enable a project as Git Repo</h3>
+	<p><b>git init</b></p>
+	
+<h3>2) How to Clone Existing Git Repo</h3>
+	<p><b>git clone <https://github.com/UserName/Project/Repo.git></b></p>
+	
+<h3>3) How to set contributor's User Name & Email of Repo</h3>
+	<p><b>git config user.name "<UserName>"</b></p>
+	<p><b>git config user.email "<EmailId>"</b></p>
 
-<h3>1) How to see the git status</h3>
+<h3>4) How to see the Git Status of Repo</h3>
 	<p><b>git status</b></p>
 	
-<h3>2)	How to see the differences between last commit head to current commit</h3>
+<h3>5) How to See all Git Branches</h3>
+	<p><b>git branch -a</b></p>
+	
+<h3>6) How to CheckOut Develop Branch</h3>
+	<p><b>git checkout develop</b></p>
+	
+<h3>7) How to CheckOut a Feature Branch based on Develop Branch</h3>
+	<p><b>git checkout -b feature/US123456</b></p>
+	
+<h3>8) How to See the Git Commits Log of Repo</h3>
+	<p><b>git log</b></p>
+	
+<h3>9) How to See the Git Branch Flows of Repo</h3>
+	<p><b>gitk --all</b></p>
+	
+<h3>10) How to Commit to Git Repo</h3>
+	<p><b>git add . </b></p>
+	<p><b>git commit -m "<Commit Message>"</b></p>
+
+<h3>11) How to Ammend the Last Commit message</h3>
+	<p><b>git commit --amend</b></p>
+		
+<h3>12) How to See if any Remote Branch set as Upstream of Repo</h3>
+	<p><b>git remote -v</b></p>
+	
+<h3>13) How to Add Remote branch as Upstream of Repo</h3>
+	<p><b>git remote add orign <https://github.com/UserName/Project/Repo.git></b></p>
+		
+<h3>14) How to Push current local repo to Repo at Remote Server i.e. GitHub or Azure DevOps</h3>
+	<p><b>git push orign <BranchName></b></p>
+	
+<h3>15)	How to See the differences between last commit head to current commit</h3>
 	<p><b>git diff HEAD^ HEAD</b></p>
 	
-<h3>3)	How to see the diff in specific two branch</h3>
+<h3>16)	How to See the diff in specific two branch</h3>
 	<p><b>git diff branch1..branch2</b></p>
 	
-<h3>4)	Git Pull command syntax</h3>
+<h3>17)	Git Pull command syntax</h3>
 	<p><b>git pull [<options>] [<repository> [<refspec>...]]</b></p>
 	
-<h3>5)	How to Rename the Remote branch</h3>
-	<p><b>git branch -m old_branch new_branch</b>   &nbsp;&nbsp;&nbsp;&nbsp;      # Rename branch locally<br/>
-	<b>git push origin :old_branch</b>       &nbsp;&nbsp;&nbsp;&nbsp;        # Delete the old branch<br/>
-	<b>git push --set-upstream origin new_branch</b>  &nbsp;&nbsp;&nbsp;&nbsp; # Push the new branch, set local branch to track the new remote</p>
+<h3>18)	How to Rename the Remote branch</h3>
+	<p><b>git branch -m OldBranchName NewBranchName</b>   &nbsp;&nbsp;&nbsp;&nbsp;      # Rename Branch Locally<br/>
+	<b>git push origin :OldBranchName</b>       &nbsp;&nbsp;&nbsp;&nbsp;        # Delete the Old Branch<br/>
+	<b>git push --set-upstream origin NewBranchName</b>  &nbsp;&nbsp;&nbsp;&nbsp; # Push the New Branch, set Local Branch to track the New Remote</p>
 	
-<h3>6) If you branch is diverged from 'develop' branch and pushed to remote branch </h3>
+<h3>19) If you branch is diverged from 'develop' branch and pushed to remote branch </h3>
 	<p>we can reset to the last opted branch using gitk GUI commits sequences</p>
 	
-<h3>7) How to Edit the Commit messages in GIT Bash</h3>
+<h3>20) How to Edit the Commit messages in GIT Bash</h3>
 	<p><b>git rebase -i head~n</b>  &nbsp;&nbsp;&nbsp;&nbsp; [where 'n' is the index of the commit in gitk sequences]</p>
 	
-<h3>8) How to Squash the Multiple Commits into single commit</h3>
+<h3>21) How to Squash the Multiple Commits into single commit</h3>
 		<p><b>git rebase -i head~n</b>	&nbsp;&nbsp;&nbsp;&nbsp; [where 'n' is the index of the commit upto which commits will be Squashed]</p>
 		<p>Pick the Commit which will be used as base.<br/>
 			And select <b>s</b> for Squash into the base Pick one commit.<br/>
 			Use Escape key button and type <b>:wq</b> and hit enter. which will prvide edit the Commit squashed message</p>
 
-<h3>9) How to Sync the Git's Branches with Remote and local repositories</h3>
+<h3>22) How to Sync the Git's Branches with Remote and Local Repos</h3>
 	<p><b>git pull --prune</b></p>
 	
-<h3>10) How to Checkout the Remote Branch to local repository</h3>
+<h3>22) How to Checkout the Remote Branch to Local Repo</h3>
 	<p><b>git checkout origin/feature/US123456</b><br/>
 	<b>git checkout -b feature/DE123456</b></p>
 	
-<h3>11) How to Edit the Last Commit message</h3>
-	<p><b>git commit --amend</b></p>
-
-<h3>12) How to forcefully pushed to remote repositories</h3>
+<h3>23) How to Forcefully Push to Remote Repo</h3>
 	<p><b>git push -f origin <remote branch name></b></p>
 	
-<h3>13) How to modify the First Commit in the Project </h3>
+<h3>24) How to Modify the First Commit in the Project </h3>
 	<p><b>git rebase -i --root</b><br/>
 	Then changes and force push</b><br/>
 	<b>git push -f -u origin <BranchName></b></p>
 	
-<h3>14) How to change the specific commits author</h3>
+<h3>25) How to Change the specific commits author</h3>
 	<p><b>git rebase -i <SpecificCommitHash></b><br/>
 	use e= edit option and save using :wq<br/>
 	<b>git config user.name "<UserName>"</b><br/>
@@ -63,7 +101,7 @@
 	<b>git rebase --continue</b><br/>
 	<b>git push -f -u origin <BranchName></b></p>
 
-<h3>15) How to override one branch with Other branch</h3>
+<h3>26) How to Override one branch with Other branch</h3>
 	<p>You should be able to use the "ours" merge strategy to overwrite master with seotweaks like this:<br/>
 
 	<b>git checkout seotweaks</b><br/>
@@ -74,11 +112,11 @@
 
 	(-s ours is short for --strategy=ours)</p>
 	
-<h3>16) How to delete Remote and Local branch in Git</h3>
-	<p><b>git push origin --delete <branch_name></b><br/>
-	<b>git branch -d <branch_name></b></p>
+<h3>27) How to Delete Remote and Local branch in Git</h3>
+	<p><b>git push origin --delete <BranchName></b><br/>
+	<b>git branch -d <BranchName></b></p>
 	
-<h3>17) How to revert a specific file to specif commits state</h3>
+<h3>28) How to Revert a specific file to specif commits state</h3>
 	<p>Assuming the hash of the commit you want is abcde:<br/>
 	<b>git checkout &lt;commit-hash&gt; &lt;file/to/restore&gt;</b><br/>
 	Note if you want to revert changes made to the files in commit abcde you have to pass the commit right before abcde.<br/>
@@ -87,10 +125,10 @@
 	As a side note, I've always been uncomfortable with this command because it's used for both ordinary things (changing between branches) and<br/>
 	unusual destructive things (discarding changes in the working directory).</p>
 
-<h3>18) How to see the all properties of git config settings</h3>
+<h3>29) How to See the all properties of git config settings</h3>
 	<p><b>$ git config --list</b></p>
 	
-<h3>19)	What is 'cherry-Pick' mean in git:-</h3>
+<h3>30)	What is 'cherry-Pick' mean in git:-</h3>
 
 	<p>Cherry picking in git means to choose a commit from one branch and apply it onto another.<br/>
 	
